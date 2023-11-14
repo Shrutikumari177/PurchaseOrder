@@ -1,0 +1,34 @@
+{
+  "name": "PurchaseOrders1",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.7.0",
+    "@sap/cds": "^7.3.1",
+    "express": "^4",
+    "passport": "^0.6.0",
+    "@sap/cds-hana": "^2"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "CE_PURCHASEORDER_0001": {
+        "kind": "odata",
+        "model": "srv/external/CE_PURCHASEORDER_0001",
+        
+        "credentials": {
+          "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata4/sap/api_purchaseorder_2/srvd_a2x/sap/purchaseorder/0001"
+        }
+      },
+      "db": "hana"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// GET http://localhost:4004/odata/v4/escalation-management/PurchaseOrders
+
+POST http://localhost:4004/odata/v4/escalation-management/PurchaseOrders
+Content-Type: application/json
+ 
+{
+    "PurchaseOrderType": "NB",  
+    "Supplier": "18322222",
+    "SupplierPhoneNumber": "",    
+    "ID": "9500000003"
+}
+
